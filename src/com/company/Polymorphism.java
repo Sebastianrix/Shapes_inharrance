@@ -1,48 +1,48 @@
 package com.company;
-import java.awt.*;
-import java.awt.geom.*;
-import javax.swing.*;
-class superclass {
-    public void shape() {
-        System.out.println("Shapes are made out of points");
-        for (float i = 0; i <= 2; ++i) {
-            for(float j = 0; j <=2; ++j) {
-                float b = i;
-                float o = j;
-                Point2D.Float n = new Point2D.Float(b,o);
-                System.out.println(n);
+
+class Shape {
+    public double Area() {
+     return 0;
             }
-
+    public double Circumference(){ return 0;}
+        }
+class Circle extends Shape {
+    private double diameter;
+   Circle (double diameter){
+       this.diameter = diameter;
+   }
+    public double Area(){return Math.pow(diameter/2,2)* Math.PI;
+    public double Cirumference(){return Math.PI*diameter;}
         }
     }
 
-}
-class Circle extends superclass {
-        public void shape(){
-            Ellipse2D.Float r = new Ellipse2D.Float(50,75,100,250);
-        }
-    }
+class Rectangle extends Shape {
+    private double width;
+    private double height;
 
-class Rectangle extends superclass {
-       public void shape(){
-           Rectangle2D.Float r = new Rectangle2D.Float(0,0,2,2);
+    Rectangle (double width, double height){
+        this.height = height;
+        this.width = width;
     }
+       public double Area(){
+     return width * height;
+    }
+       public double Circumference(){
+     return width + width + height + height;
+       }
 }
-
-/*class Triangle extends superclass {
-    public void shape(){
-        Triangle2D r = new Triangle2D(float 50,float 75,float 20, float 40,float 70,float 90);
-    }
-}*/
 
 
 public class Polymorphism {
     public static void main(String[] args) {
-     Rectangle a = new Rectangle();
-  //   Triangle c = mew Triangle();
-    superclass b = new superclass();
+     Rectangle a = new Rectangle(2,2);
+        Circle b = new Circle(3);
+         Shape c = new Shape();
 
-    a.shape();
-    b.shape();
+    a.Area();
+    b.Area();
+    c.Area();
+
+//    System.out.println(b.Area);
     }
 }
