@@ -11,9 +11,9 @@ class Circle extends Shape {
    Circle (double diameter){
        this.diameter = diameter;
    }
-    public double Area(){return Math.pow(diameter/2,2)* Math.PI;
-    public double Cirumference(){return Math.PI*diameter;}
-        }
+    public double Area(){return Math.pow(diameter/2,2)* Math.PI;}
+    public double Circumference(){return Math.PI*diameter;}
+
     }
 
 class Rectangle extends Shape {
