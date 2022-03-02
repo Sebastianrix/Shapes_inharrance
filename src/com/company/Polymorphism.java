@@ -43,6 +43,9 @@ public class Polymorphism {
     b.Area();
     c.Area();
 
+    a.Circumference();
+    b.Circumference();
+    c.Circumference();
 //    System.out.println(b.Area);
     }
 }
