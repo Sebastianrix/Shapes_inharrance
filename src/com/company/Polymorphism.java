@@ -1,5 +1,6 @@
 package com.company;
 
+
 class Shape {
     public double Area() {
      return 0;
@@ -7,13 +8,12 @@ class Shape {
     public double Circumference(){ return 0;}
         }
 class Circle extends Shape {
-    private double diameter;
-   Circle (double diameter){
+            private double diameter;
+    Circle (double diameter){
        this.diameter = diameter;
    }
     public double Area(){return Math.pow(diameter/2,2)* Math.PI;}
     public double Circumference(){return Math.PI*diameter;}
-
     }
 
 class Rectangle extends Shape {
